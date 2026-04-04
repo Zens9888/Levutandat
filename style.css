@@ -160,8 +160,11 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle
   will-change: transform;
 
   transition: transform .22s ease, border-color .22s ease, background .22s ease;
+  overflow: hidden;
+  isolation: isolate;
 }
 
+/* ===== FIX ICON GHOST / DOUBLE ON IPHONE ===== */
 .fab i,
 .fab svg,
 .social-float a i,
@@ -169,11 +172,20 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle
   font-size: 20px;
   line-height: 1;
   display: block;
+  position: relative;
+  z-index: 2;
 
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
+  /* QUAN TRỌNG: bỏ translateZ khỏi icon */
+  transform: none !important;
+  -webkit-transform: none !important;
+
+  filter: none !important;
+  text-shadow: none !important;
+  animation: none !important;
+
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 .fab:hover,
