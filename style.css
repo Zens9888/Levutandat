@@ -212,3 +212,56 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle
   .contact-links a,
   .qr-card p{font-size:.96rem;line-height:1.7}
 }
+
+/* ===== FIX HERO MOBILE CENTER ===== */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr !important;
+    gap: 28px;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text h1,
+  .hero-text h2,
+  .hero-text p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 2.9rem;
+    line-height: 1.08;
+  }
+
+  .hero-text p {
+    max-width: 100%;
+  }
+
+  .badge {
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 auto 16px;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .hero-card {
+    width: 100%;
+  }
+}
