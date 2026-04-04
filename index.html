@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lê Vũ Tấn Đạt | IT Support Portfolio</title>
+  <meta name="description" content="Portfolio cá nhân của Lê Vũ Tấn Đạt - IT Help Desk / IT Support / System & Network." />
+  <meta name="keywords" content="IT Support, Help Desk, Network, System Administration, Synology, Windows Server, Portfolio" />
+  <meta name="author" content="Lê Vũ Tấn Đạt" />
+  <meta property="og:title" content="Lê Vũ Tấn Đạt | IT Support Portfolio" />
+  <meta property="og:description" content="IT Support Engineer với hơn 3 năm kinh nghiệm về Network, System, NAS Synology và Technical Support." />
+  <meta property="og:image" content="assets/profile.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/profile.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="loading-screen"><div class="loader-ring"></div><p>Loading portfolio...</p></div>
+  <div class="scroll-progress"></div>
+  <canvas id="bg-canvas"></canvas>
+  <div class="cursor-glow"></div>
+  <div class="noise"></div>
+  <div class="aurora aurora-1"></div><div class="aurora aurora-2"></div>
+
+  <audio id="bg-music" autoplay loop playsinline>
+    <source src="assets/ambient-bg.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="floating-actions">
+    <button id="musicToggle" class="fab" title="Music"><i class="fa-solid fa-volume-high"></i></button>
+    <button id="langToggle" class="fab lang-btn">VI</button>
+    <button id="fxToggle" class="fab" title="Effects"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
+  </div>
+
+  <div class="social-float">
+    <a href="tel:0915058905"><i class="fa-solid fa-phone"></i></a>
+    <a href="mailto:Stardat98@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    <a href="http://facebook.com/StarDat1998" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="#hero" class="logo">DAT<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#about" data-i18n="nav.about">Giới thiệu</a>
+        <a href="#experience" data-i18n="nav.exp">Kinh nghiệm</a>
+        <a href="#projects" data-i18n="nav.projects">Dự án</a>
+        <a href="#skills" data-i18n="nav.skills">Kỹ năng</a>
+        <a href="#contact" data-i18n="nav.contact">Liên hệ</a>
+      </nav>
+      <a class="btn btn-outline" href="#contact" data-i18n="nav.hire">Hire Me</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero container reveal">
+      <div class="hero-text">
+        <div class="badge" data-i18n="hero.badge">✦ IT Help Desk • IT Support • System & Network</div>
+        <h1>Lê Vũ Tấn Đạt</h1>
+        <h2><span id="typing"></span></h2>
+        <p data-i18n="hero.desc">IT Support với hơn <strong>3 năm kinh nghiệm</strong> quản trị và vận hành hệ thống IT doanh nghiệp. Có kinh nghiệm thực chiến về <strong>network, NAS Synology, Windows Server, camera, thiết bị văn phòng</strong> và xử lý sự cố cho môi trường nhiều người dùng.</p>
+        <div class="hero-actions">
+          <a href="#experience" class="btn" data-i18n="hero.expBtn">Xem kinh nghiệm</a>
+          <a href="assets/LeVuTanDat-CV.pdf" class="btn btn-outline" download data-i18n="hero.cvBtn">Tải CV PDF</a>
+        </div>
+        <div class="stats">
+          <div class="card stat"><span>3+</span><small data-i18n="stats.exp">Năm kinh nghiệm</small></div>
+          <div class="card stat"><span>10+</span><small data-i18n="stats.skills">Kỹ năng chuyên môn</small></div>
+          <div class="card stat"><span>24/7</span><small data-i18n="stats.support">Tinh thần hỗ trợ</small></div>
+        </div>
+      </div>
+      <div class="hero-card card tilt">
+        <div class="avatar-wrap"><img class="avatar" src="assets/profile.jpg" alt="Lê Vũ Tấn Đạt"></div>
+        <div class="chip">PROFILE</div>
+        <h3>IT Help Desk</h3>
+        <p data-i18n="hero.card">Specialized in enterprise support, infrastructure maintenance, and fast troubleshooting.</p>
+        <div class="mini-grid">
+          <div><small>Focus</small><strong>System Support</strong></div>
+          <div><small>Specialty</small><strong>Network / NAS</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container reveal">
+      <div class="section-title"><span>ABOUT</span><h2 data-i18n="about.title">Giới thiệu bản thân</h2></div>
+      <div class="grid-2">
+        <div class="card tilt"><h3 data-i18n="about.card1t">Vận hành ổn định là ưu tiên hàng đầu</h3><p data-i18n="about.card1d">Tôi tập trung vào việc duy trì hệ thống hoạt động ổn định, phản hồi nhanh khi có sự cố và đảm bảo trải nghiệm người dùng nội bộ luôn mượt mà.</p></div>
+        <div class="card tilt"><h3 data-i18n="about.card2t">Mục tiêu nghề nghiệp</h3><p data-i18n="about.card2d">Mong muốn phát triển chuyên sâu về System Administration và Network, từng bước nâng cao khả năng triển khai, bảo trì và tối ưu hạ tầng IT doanh nghiệp.</p></div>
+      </div>
+    </section>
+
+    <section id="experience" class="section container reveal">
+      <div class="section-title"><span>EXPERIENCE</span><h2 data-i18n="exp.title">Kinh nghiệm làm việc</h2></div>
+      <div class="timeline">
+        <div class="timeline-item card tilt"><h3>IT Help Desk <span>• Timber Industries</span></h3><small>02/2024 - 02/2026</small><p>NAS Synology, Windows Server 2019 (DHCP), Cisco/Zyxel Switch, KBvision CCTV, printer & PC troubleshooting.</p></div>
+        <div class="timeline-item card tilt"><h3>IT Help Desk <span>• EMASI Vạn Phúc</span></h3><small>06/2022 - 01/2023</small><p>Quản lý mạng nội bộ, setup camera, thiết bị văn phòng, hỗ trợ POS, bảo trì server room và vendor support.</p></div>
+        <div class="timeline-item card tilt"><h3>IT Intern <span>• Titan Technology Corporation</span></h3><small>02/2021 - 05/2021</small><p>Hỗ trợ cài đặt hệ điều hành, bảo trì máy tính/laptop, lắp đặt camera và triển khai thiết bị IT doanh nghiệp.</p></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container reveal">
+      <div class="section-title"><span>PROJECTS</span><h2>Dự án nổi bật</h2></div>
+      <div class="projects-grid">
+        <div class="card project tilt"><i class="fa-solid fa-server"></i><h3>Synology NAS Administration</h3><p>Quản lý user, permission, backup, thay ổ đĩa và vận hành NAS cho môi trường doanh nghiệp.</p></div>
+        <div class="card project tilt"><i class="fa-solid fa-network-wired"></i><h3>Enterprise Network Support</h3><p>Vận hành switch Cisco/Zyxel, VLAN cơ bản, LAN troubleshooting và hỗ trợ hệ thống nhiều người dùng.</p></div>
+        <div class="card project tilt"><i class="fa-solid fa-camera"></i><h3>KBvision CCTV Deployment</h3><p>Setup camera, add đầu ghi, bảo trì và giám sát hệ thống camera cho doanh nghiệp / trường học.</p></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section container reveal">
+      <div class="section-title"><span>SKILLS</span><h2 data-i18n="skills.title">Kỹ năng chuyên môn</h2></div>
+      <div class="skills-wrap">
+        <div class="skill card tilt"><i class="fa-brands fa-windows"></i><span>Windows Server 2019</span></div>
+        <div class="skill card tilt"><i class="fa-solid fa-network-wired"></i><span>DHCP / VLAN / LAN</span></div>
+        <div class="skill card tilt"><i class="fa-solid fa-hard-drive"></i><span>NAS Synology</span></div>
+        <div class="skill card tilt"><i class="fa-solid fa-ethernet"></i><span>Cisco / Zyxel Switch</span></div>
+        <div class="skill card tilt"><i class="fa-solid fa-video"></i><span>KBvision CCTV</span></div>
+        <div class="skill card tilt"><i class="fa-solid fa-screwdriver-wrench"></i><span>PC / Laptop / Printer</span></div>
+      </div>
+    </section>
+
+    <section class="section container reveal">
+      <div class="section-title"><span>ACHIEVEMENTS</span><h2>Điểm nổi bật</h2></div>
+      <div class="grid-2">
+        <div class="card tilt"><h3>System Stability</h3><p>Hỗ trợ vận hành hệ thống IT ổn định cho môi trường doanh nghiệp và xử lý sự cố nhanh.</p></div>
+        <div class="card tilt"><h3>Fast Support Process</h3><p>Rút ngắn thời gian hỗ trợ người dùng thông qua quy trình xử lý và phản hồi hiệu quả.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container reveal">
+      <div class="section-title"><span>CONTACT</span><h2 data-i18n="contact.title">Kết nối với tôi</h2></div>
+      <div class="contact-box">
+        <div class="card tilt">
+          <p data-i18n="contact.desc">Sẵn sàng cho cơ hội mới trong mảng IT Support / System Administration / Network.</p>
+          <div class="contact-links">
+            <a class="contact-link" href="tel:0915058905"><i class="fa-solid fa-phone"></i> 0915 058 905</a>
+            <a class="contact-link" href="mailto:Stardat98@gmail.com"><i class="fa-solid fa-envelope"></i> Stardat98@gmail.com</a>
+            <a class="contact-link" href="http://facebook.com/StarDat1998" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook Profile</a>
+          </div>
+          <div class="hero-actions">
+            <a href="http://facebook.com/StarDat1998" class="btn" target="_blank">Facebook</a>
+            <a href="tel:0915058905" class="btn btn-outline">Gọi ngay</a>
+          </div>
+        </div>
+        <div class="qr-card card tilt"><img src="assets/zalo-qr.jpg" alt="Zalo QR"><p>Quét mã để kết nối Zalo</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© 2026 Lê Vũ Tấn Đạt — IT Portfolio</footer>
+  <script src="script.js"></script>
+</body>
+</html>
