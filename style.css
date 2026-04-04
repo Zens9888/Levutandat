@@ -113,9 +113,89 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle
 .aurora-1{width:280px;height:280px;background:var(--primary);top:10%;left:5%;animation:drift 14s infinite alternate}
 .aurora-2{width:320px;height:320px;background:var(--pink);bottom:8%;right:6%;animation:drift 18s infinite alternate}
 @keyframes drift{from{transform:translate(0,0)}to{transform:translate(40px,-30px)}}
-.floating-actions,.social-float{position:fixed;right:18px;display:flex;flex-direction:column;gap:12px;z-index:100}
-.floating-actions{top:100px}.social-float{bottom:24px}
-.fab,.social-float a{width:46px;height:46px;border-radius:50%;border:1px solid var(--stroke);background:rgba(9,17,31,.7);backdrop-filter:blur(18px);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow)}
+/* ===== FIX FLOATING BUTTONS FOR IPHONE ===== */
+.floating-actions,
+.social-float {
+  position: fixed;
+  right: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 9999;
+
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.floating-actions {
+  top: 100px;
+}
+
+.social-float {
+  bottom: 24px;
+}
+
+.fab,
+.social-float a {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(9,17,31,0.88);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+
+  /* iPhone Safari repaint fix */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+
+  transition: transform .22s ease, border-color .22s ease, background .22s ease;
+}
+
+.fab i,
+.fab svg,
+.social-float a i,
+.social-float a svg {
+  font-size: 20px;
+  line-height: 1;
+  display: block;
+
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.fab:hover,
+.social-float a:hover {
+  transform: translateY(-3px);
+  border-color: rgba(67,213,255,.45);
+}
+
+/* iPhone / Mobile: tắt hover nâng để tránh ghost */
+@media (max-width: 768px) {
+  .fab:hover,
+  .social-float a:hover {
+    transform: none;
+  }
+}
+
+/* Safari ghost icon fix */
+.floating-actions *,
+.social-float * {
+  -webkit-font-smoothing: antialiased;
+  contain: layout paint style;
+}
 .lang-btn{font-weight:800}
 .hero-card,.card,.project,.skill{transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease}
 .card:hover{border-color:rgba(67,213,255,.45);box-shadow:0 20px 80px rgba(67,213,255,.12)}
