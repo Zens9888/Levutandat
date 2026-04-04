@@ -357,3 +357,36 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle
     width: 100%;
   }
 }
+
+/* ===== FINAL FIX RIÊNG CHO ICON ĐIỆN THOẠI IPHONE ===== */
+.phone-btn {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+
+.phone-btn::before,
+.phone-btn::after {
+  content: none !important;
+  display: none !important;
+}
+
+.phone-btn i,
+.phone-btn svg {
+  position: relative !important;
+  z-index: 5 !important;
+  display: block !important;
+  font-size: 20px !important;
+  line-height: 1 !important;
+
+  transform: none !important;
+  -webkit-transform: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+  animation: none !important;
+  box-shadow: none !important;
+
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  -webkit-font-smoothing: antialiased !important;
+}
